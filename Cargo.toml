@@ -1,0 +1,8 @@
+[workspace]
+members = ["error-code", "error-code-macros"]
+resolver = "2"
+
+
+[workspace.dependencies]
+error-info = { path = "../error-info" }
+error-info-macros = { path = "../error-info-macros" }
