@@ -4,5 +4,8 @@ resolver = "2"
 
 
 [workspace.dependencies]
-error-info = { path = "../error-info" }
-error-info-macros = { path = "../error-info-macros" }
+error-code = { path = "error-code" }
+error-code-macros = { path = "error-code-macros" }
+http = "1"
+thiserror = "1"
+anyhow = "1"
