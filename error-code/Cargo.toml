@@ -6,11 +6,25 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+base64 = "0.22.1"
+
 error-code-macros = { workspace = true }
 thiserror = "1.0.60"
+
 
 [dev-dependencies]
 anyhow = { workspace = true }
 error-code = { workspace = true }
 http = { workspace = true }
 thiserror = { workspace = true }
+tokio = { version = "1.37.0", features = [
+	"rt",
+	"net",
+	"rt-multi-thread",
+	"macros",
+] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+axum = { version = "0.7.5", features = ["ws", "http2", "query", "tracing"] }
+backtrace = "0.3.71"
